@@ -1,0 +1,72 @@
+{
+  "$comment": "Template file schema \u2014 /shared/brand-book/templates/{slug}.json.",
+  "template": "proposal",
+  "display_name": "Proposal",
+  "version": 1,
+  "artifact_type": "proposal",
+  "sections": [
+    {
+      "name": "cover",
+      "required": true,
+      "elements": [
+        "cover-page",
+        "title-block"
+      ],
+      "notes": "\u2026"
+    },
+    {
+      "name": "body",
+      "required": true,
+      "elements": [
+        "header",
+        "table",
+        "list",
+        "callout"
+      ],
+      "notes": "\u2026"
+    },
+    {
+      "name": "close",
+      "required": false,
+      "elements": [
+        "footer",
+        "metadata-block"
+      ],
+      "notes": "\u2026"
+    }
+  ],
+  "slots": [
+    {
+      "name": "client-logo",
+      "kind": "image",
+      "placement": "cover.top-right",
+      "sizing": "max-height 18mm",
+      "clear_space": "0.5x logo height",
+      "required": false
+    },
+    {
+      "name": "client-name",
+      "kind": "text",
+      "placement": "cover.subtitle",
+      "sizing": null,
+      "clear_space": null,
+      "required": false
+    }
+  ],
+  "per_format": {
+    "docx": {
+      "notes": "\u2026"
+    },
+    "pptx": {
+      "notes": "\u2026"
+    }
+  },
+  "author_hash": "\u2026",
+  "author_name": "\u2026",
+  "last_updated": "YYYY-MM-DD",
+  "provenance": {},
+  "$notes": [
+    "Slot VALUES are never stored here \u2014 consumers supply them at compose time from their own context (e.g., a client-intelligence instance's branding/ dir).",
+    "Starter element slugs: cover-page, header, footer, table, list, callout, title-block, metadata-block, chart-style, kpi-card, toc, section-divider, code-block, quote."
+  ]
+}

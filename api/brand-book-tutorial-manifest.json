@@ -1,0 +1,21 @@
+{
+  "name": "brand-book-tutorial",
+  "type": "skill",
+  "display_name": "Brand Book Tutorial",
+  "collection": "brand-book",
+  "collection_version": "1.0.0",
+  "version": "1.0.0",
+  "eol_date": null,
+  "eol_warning_days": 60,
+  "stateful": false,
+  "setup_template": "brand-book-tutorial-setup.md",
+  "dependency_status": "complete",
+  "missing_dependencies": [],
+  "parameter_provenance": {},
+  "dependencies": {
+    "skills": [],
+    "tasks": []
+  },
+  "external_dependencies": [],
+  "always_on_eligible": false
+}

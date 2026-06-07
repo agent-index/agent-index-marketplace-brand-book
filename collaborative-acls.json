@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "acls": [
+    {
+      "path": "/shared/brand-book/",
+      "recipient": "{all_members_group}",
+      "role": "writer",
+      "inherit": true,
+      "rationale": "Open-commons published brand space: any member can publish via the confirmation-gated publish task; writes are attributed and activity-logged. Task-level governance per the access model."
+    },
+    {
+      "path": "/shared/brand-book-index/",
+      "recipient": "{all_members_group}",
+      "role": "writer",
+      "inherit": true,
+      "rationale": "Pointer index for shared drafts (pointer-on-first-share, overwrite-only)."
+    }
+  ]
+}

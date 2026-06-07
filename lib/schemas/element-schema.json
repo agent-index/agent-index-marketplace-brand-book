@@ -1,0 +1,46 @@
+{
+  "$comment": "Element file schema (lib/schemas) \u2014 one file per element at /shared/brand-book/elements/{slug}.json (published) or id:{member_folder_id}/brand-book/elements/{slug}/element.json (draft).",
+  "element": "table",
+  "display_name": "Table",
+  "version": 1,
+  "semantic": "Prose contract: what this element is for and the design intent, independent of format.",
+  "renderings": {
+    "markdown": {
+      "instructions": "Agent-followable styling instructions for markdown output.",
+      "params": {}
+    },
+    "docx": {
+      "instructions": "\u2026",
+      "params": {
+        "header_fill": "{token:palette.primary}",
+        "font": "{token:typography.body}"
+      }
+    },
+    "pptx": {
+      "instructions": "\u2026",
+      "params": {}
+    },
+    "html": {
+      "instructions": "\u2026",
+      "params": {
+        "classes": "\u2026"
+      }
+    },
+    "pdf": {
+      "instructions": "\u2026",
+      "params": {}
+    }
+  },
+  "author_hash": "\u2026",
+  "author_name": "\u2026",
+  "last_updated": "YYYY-MM-DD",
+  "provenance": {
+    "published_from": "{draft slug}",
+    "published_date": "YYYY-MM-DD"
+  },
+  "$notes": [
+    "Absent format key => consumer uses its native default (rendering_missing).",
+    "params may reference tokens via {token:...} indirection so palette changes propagate without editing elements.",
+    "version is an integer, bumped on every published change."
+  ]
+}

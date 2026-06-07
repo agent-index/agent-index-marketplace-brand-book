@@ -1,0 +1,187 @@
+{
+  "name": "brand-book",
+  "display_name": "Brand Book",
+  "version": "1.0.0",
+  "description": "The org's single source of truth for how produced artifacts look, sound, and feel \u2014 design tokens, voice, display elements, and artifact templates with counterparty slots. Registers as the brand-book capability provider; artifact-producing collections consume it automatically. Drafts develop privately in the author's own space and publish into the org commons.",
+  "author": "agent-index",
+  "license": "open",
+  "category": "design",
+  "agent_index_min_version": "3.10.0",
+  "provides": [
+    {
+      "capability": "brand-book",
+      "capability_version": "1.0.0",
+      "operations": {
+        "get-brand-guidelines": {
+          "implemented_by": "get-brand-guidelines",
+          "type": "task"
+        },
+        "get-element": {
+          "implemented_by": "get-element",
+          "type": "task"
+        },
+        "get-template": {
+          "implemented_by": "get-template",
+          "type": "task"
+        },
+        "get-asset": {
+          "implemented_by": "get-asset",
+          "type": "task"
+        }
+      }
+    }
+  ],
+  "api": [
+    {
+      "name": "edit-brand",
+      "triggers": [
+        {
+          "phrase": "edit the brand",
+          "capability": "edit-brand",
+          "description": "Edit org tokens, voice, and tone"
+        },
+        {
+          "phrase": "update our brand colors",
+          "capability": "edit-brand",
+          "description": "Edit design tokens"
+        },
+        {
+          "phrase": "change our brand voice",
+          "capability": "edit-brand",
+          "description": "Edit voice and tone"
+        }
+      ]
+    },
+    {
+      "name": "create-element",
+      "triggers": [
+        {
+          "phrase": "create a brand element",
+          "capability": "create-element",
+          "description": "Draft a new display element"
+        },
+        {
+          "phrase": "new display element",
+          "capability": "create-element",
+          "description": "Draft a new display element"
+        }
+      ]
+    },
+    {
+      "name": "edit-element",
+      "triggers": [
+        {
+          "phrase": "edit brand element",
+          "capability": "edit-element",
+          "description": "Edit a draft or published element"
+        }
+      ]
+    },
+    {
+      "name": "create-template",
+      "triggers": [
+        {
+          "phrase": "create a brand template",
+          "capability": "create-template",
+          "description": "Draft a new artifact template"
+        },
+        {
+          "phrase": "new artifact template",
+          "capability": "create-template",
+          "description": "Draft a new artifact template"
+        }
+      ]
+    },
+    {
+      "name": "edit-template",
+      "triggers": [
+        {
+          "phrase": "edit brand template",
+          "capability": "edit-template",
+          "description": "Edit a draft or published template"
+        }
+      ]
+    },
+    {
+      "name": "manage-assets",
+      "triggers": [
+        {
+          "phrase": "upload a brand asset",
+          "capability": "manage-assets",
+          "description": "Upload/name/replace brand assets"
+        },
+        {
+          "phrase": "add our logo",
+          "capability": "manage-assets",
+          "description": "Upload a named brand asset"
+        }
+      ]
+    },
+    {
+      "name": "share-draft",
+      "triggers": [
+        {
+          "phrase": "share my brand draft",
+          "capability": "share-draft",
+          "description": "Share a draft element/template with reviewers"
+        }
+      ]
+    },
+    {
+      "name": "publish-brand-item",
+      "triggers": [
+        {
+          "phrase": "publish brand element",
+          "capability": "publish-brand-item",
+          "description": "Publish a draft to the org brand book"
+        },
+        {
+          "phrase": "publish brand template",
+          "capability": "publish-brand-item",
+          "description": "Publish a draft to the org brand book"
+        }
+      ]
+    },
+    {
+      "name": "preview-brand",
+      "triggers": [
+        {
+          "phrase": "preview the brand",
+          "capability": "preview-brand",
+          "description": "Render a sample artifact with current brand"
+        },
+        {
+          "phrase": "show me our brand",
+          "capability": "preview-brand",
+          "description": "Render a sample artifact"
+        }
+      ]
+    },
+    {
+      "name": "get-brand-guidelines",
+      "triggers": []
+    },
+    {
+      "name": "get-element",
+      "triggers": []
+    },
+    {
+      "name": "get-template",
+      "triggers": []
+    },
+    {
+      "name": "get-asset",
+      "triggers": []
+    },
+    {
+      "name": "brand-book-tutorial",
+      "triggers": [
+        {
+          "phrase": "how does the brand book work",
+          "capability": "brand-book-tutorial",
+          "description": "Guided tour of the brand-book collection"
+        }
+      ]
+    }
+  ]
+}
