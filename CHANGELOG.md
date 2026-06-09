@@ -1,5 +1,11 @@
 # Brand Book Collection — Changelog
 
+## [1.0.1] — 2026-06-08 — alias collision fix (BB-F1)
+
+### Changed
+
+- Renamed tasks `create-template` → `create-brand-template` and `edit-template` → `edit-brand-template` (files, frontmatter, manifests, setup templates, collection.json api[], README). These collided with client-intelligence's identically-named tasks; install-collection's alias resolver handled it per-install, but the rename makes the names deterministic across every org (and matches the resolved aliases the live install already produced). bug 20260608 BB-F1.
+
 ## [1.0.0] — 2026-06-07
 
 ### Added

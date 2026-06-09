@@ -1,7 +1,7 @@
 {
   "name": "brand-book",
   "display_name": "Brand Book",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The org's single source of truth for how produced artifacts look, sound, and feel \u2014 design tokens, voice, display elements, and artifact templates with counterparty slots. Registers as the brand-book capability provider; artifact-producing collections consume it automatically. Drafts develop privately in the author's own space and publish into the org commons.",
   "author": "agent-index",
   "license": "open",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "name": "create-template",
+      "name": "create-brand-template",
       "triggers": [
         {
           "phrase": "create a brand template",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "name": "edit-template",
+      "name": "edit-brand-template",
       "triggers": [
         {
           "phrase": "edit brand template",

@@ -1,5 +1,5 @@
 ---
-name: edit-template
+name: edit-brand-template
 type: task
 version: 1.0.0
 collection: brand-book

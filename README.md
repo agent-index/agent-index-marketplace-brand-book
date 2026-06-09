@@ -7,7 +7,7 @@ The org's single source of truth for how produced artifacts look, sound, and fee
 ### Foundations & Content
 - **edit-brand** — design tokens (palette, typography, spacing, iconography) + voice and tone
 - **create-element / edit-element** — display elements (14 starters: cover-page, header, footer, table, list, callout, title-block, metadata-block, chart-style, kpi-card, toc, section-divider, code-block, quote — plus custom), drafted privately with per-format renderings (markdown, docx, pptx, html, pdf)
-- **create-template / edit-template** — artifact templates: section composition + counterparty slots
+- **create-brand-template / edit-brand-template** — artifact templates: section composition + counterparty slots
 - **manage-assets** — named brand assets (logos, icons, patterns)
 
 ### Lifecycle
@@ -35,7 +35,7 @@ agent-index-core ≥ 3.10.0 and agent-index-marketplace ≥ 2.10.0 (capability-p
 
 ## Version
 
-1.0.0
+1.0.1
 
 ## Version History
 

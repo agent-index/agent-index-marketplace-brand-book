@@ -1,5 +1,5 @@
 ---
-name: create-template
+name: create-brand-template
 type: task
 version: 1.0.0
 collection: brand-book

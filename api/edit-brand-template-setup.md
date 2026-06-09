@@ -1,10 +1,10 @@
 ---
-name: create-template-setup
+name: edit-brand-template-setup
 type: setup
 version: 1.0.0
 collection: brand-book
-description: Setup template for create-template.
-target: create-template
+description: Setup template for edit-template.
+target: edit-brand-template
 target_type: task
 upgrade_compatible: true
 ---
@@ -15,9 +15,9 @@ None — behavior is governed by org collection setup (`brand_usage`) and conven
 
 ## Setup Completion
 
-1. Write the installed instance (using native file tools — LOCAL workspace) to `members/{member_hash}/skills/create-template/`
+1. Write the installed instance (using native file tools — LOCAL workspace) to `members/{member_hash}/skills/edit-brand-template/`
 2. Write `manifest.json`; register in `member-index.json`.
-3. Confirm to member: "create-template is ready."
+3. Confirm to member: "edit-brand-template is ready."
 
 ## Upgrade Behavior
 
