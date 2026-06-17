@@ -1,46 +1,32 @@
 {
-  "$comment": "Element file schema (lib/schemas) \u2014 one file per element at /shared/brand-book/elements/{slug}.json (published) or id:{member_folder_id}/brand-book/elements/{slug}/element.json (draft).",
+  "$comment": "Element file schema (lib/schemas) — one file per element at /shared/brand-book/elements/{slug}.json (published) or id:{member_folder_id}/brand-book/elements/{slug}/element.json (draft).",
   "element": "table",
   "display_name": "Table",
   "version": 1,
   "semantic": "Prose contract: what this element is for and the design intent, independent of format.",
-  "renderings": {
-    "markdown": {
-      "instructions": "Agent-followable styling instructions for markdown output.",
-      "params": {}
-    },
-    "docx": {
-      "instructions": "\u2026",
-      "params": {
-        "header_fill": "{token:palette.primary}",
-        "font": "{token:typography.body}"
-      }
-    },
-    "pptx": {
-      "instructions": "\u2026",
-      "params": {}
-    },
-    "html": {
-      "instructions": "\u2026",
-      "params": {
-        "classes": "\u2026"
-      }
-    },
-    "pdf": {
-      "instructions": "\u2026",
-      "params": {}
+  "markers": [
+    {
+      "name": "actions",
+      "placement": "footer-right",
+      "accepts": "<the org's action-control element>",
+      "description": "A NEUTRAL named insertion point the element exposes. The element never names what goes here. A domain template fills it via template.marker_fills; an unfilled marker renders nothing. Reusable across collections."
     }
+  ],
+  "renderings": {
+    "markdown": { "instructions": "Agent-followable styling instructions for markdown output.", "params": {} },
+    "docx": { "instructions": "…", "params": { "header_fill": "{token:palette.primary}", "font": "{token:typography.body}" } },
+    "pptx": { "instructions": "…", "params": {} },
+    "html": { "instructions": "…", "params": { "classes": "…" } },
+    "pdf": { "instructions": "…", "params": {} }
   },
-  "author_hash": "\u2026",
-  "author_name": "\u2026",
+  "author_hash": "…",
+  "author_name": "…",
   "last_updated": "YYYY-MM-DD",
-  "provenance": {
-    "published_from": "{draft slug}",
-    "published_date": "YYYY-MM-DD"
-  },
+  "provenance": { "published_from": "{draft slug}", "published_date": "YYYY-MM-DD" },
   "$notes": [
     "Absent format key => consumer uses its native default (rendering_missing).",
     "params may reference tokens via {token:...} indirection so palette changes propagate without editing elements.",
-    "version is an integer, bumped on every published change."
+    "version is an integer, bumped on every published change.",
+    "markers (v1.1+, OPTIONAL): named, behavior-free insertion points the element exposes. Components stay generic; domain-specific templates populate markers via marker_fills. Omit or [] for elements with no insertion points. 'accepts' names the element role expected (an action-control element the org defines)."
   ]
 }

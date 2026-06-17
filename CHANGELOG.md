@@ -1,5 +1,18 @@
 # Brand Book Collection — Changelog
 
+## [1.1.0] — 2026-06-17 — interactive templates & action markers
+
+### Added
+
+- **Action markers (elements).** `element-schema.json` gains an optional `markers[]` field: neutral, behavior-free insertion points an element exposes (e.g. `card.actions`, `header.actions`). Generic elements stay reusable; they never name what fills a marker. `get-element` now passes `markers` through verbatim.
+- **Interactive/domain templates.** `template-schema.json` gains optional, back-compatible fields: `section.repeat:"per-item"` + `data_binding` (repeat an element over consumer-supplied items), `marker_fills[]` (a domain template places concrete buttons into an element's markers, each carrying an abstract action handle), `action_contract[]` (the handles the template emits, which the consuming collection maps to its own flows), and `surfaces` (`cowork_interactive` default + `export_formats`). `get-template` passes these through verbatim.
+- **Convention documented.** `internal/conventions.md` > "Interactive templates & action markers" defines the standard split — generic markered elements + a domain template that fills them + a consumer that maps handles to flows — so future directory/list templates inherit one solution instead of inventing their own.
+
+### Notes
+
+- Fully back-compatible: plain document templates omit all v1.1 fields; capability version stays 1.0.0 (provider op signatures unchanged — additive fields only). Ships no content (the brand book ships empty — orgs author their own elements/templates); this release adds only the schema, passthrough, and convention. The first consuming collection is client-intelligence (`list-clients` / `view-client`), which looks up a brand template by its artifact type.
+
+
 ## [1.0.1] — 2026-06-08 — alias collision fix (BB-F1)
 
 ### Changed

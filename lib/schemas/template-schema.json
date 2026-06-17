@@ -1,72 +1,53 @@
 {
-  "$comment": "Template file schema \u2014 /shared/brand-book/templates/{slug}.json.",
+  "$comment": "Template file schema — /shared/brand-book/templates/{slug}.json.",
   "template": "proposal",
   "display_name": "Proposal",
   "version": 1,
   "artifact_type": "proposal",
   "sections": [
-    {
-      "name": "cover",
-      "required": true,
-      "elements": [
-        "cover-page",
-        "title-block"
-      ],
-      "notes": "\u2026"
-    },
-    {
-      "name": "body",
-      "required": true,
-      "elements": [
-        "header",
-        "table",
-        "list",
-        "callout"
-      ],
-      "notes": "\u2026"
-    },
-    {
-      "name": "close",
-      "required": false,
-      "elements": [
-        "footer",
-        "metadata-block"
-      ],
-      "notes": "\u2026"
-    }
+    { "name": "cover", "required": true, "elements": ["cover-page", "title-block"], "notes": "…" },
+    { "name": "body", "required": true, "elements": ["header", "table", "list", "callout"], "notes": "…" },
+    { "name": "directory", "required": false, "elements": ["<card-element>"], "repeat": "per-item", "notes": "OPTIONAL (v1.1+): a section with repeat:'per-item' renders its element once per bound data item (see data_binding)." }
   ],
-  "slots": [
-    {
-      "name": "client-logo",
-      "kind": "image",
-      "placement": "cover.top-right",
-      "sizing": "max-height 18mm",
-      "clear_space": "0.5x logo height",
-      "required": false
-    },
-    {
-      "name": "client-name",
-      "kind": "text",
-      "placement": "cover.subtitle",
-      "sizing": null,
-      "clear_space": null,
-      "required": false
-    }
-  ],
-  "per_format": {
-    "docx": {
-      "notes": "\u2026"
-    },
-    "pptx": {
-      "notes": "\u2026"
-    }
+  "data_binding": {
+    "$comment": "OPTIONAL (v1.1+). Present on directory/list templates that render a repeating element over consumer-supplied items.",
+    "repeat_element": "<card-element>",
+    "repeat_over": "consumer.items",
+    "item_field_map": { "title": "name", "status": "status", "item_key": "slug" },
+    "notes": "Maps element fields to fields on each consumer item. item_key identifies the item for item-scoped actions."
   },
-  "author_hash": "\u2026",
-  "author_name": "\u2026",
+  "marker_fills": [
+    {
+      "$comment": "OPTIONAL (v1.1+). Fills a NEUTRAL element marker with concrete controls. THIS is where a domain template (not the generic element) says what buttons exist.",
+      "target": "<card-element>.actions",
+      "buttons": [
+        { "label": "Edit", "element": "<button-element>", "variant": "ghost", "icon": "ti-edit", "action": "edit", "scope": "item" },
+        { "label": "Archive", "element": "<button-element>", "variant": "ghost", "action": "archive", "scope": "item", "confirm": true }
+      ]
+    }
+  ],
+  "action_contract": [
+    { "$comment": "OPTIONAL (v1.1+). The abstract action handles this template emits. The CONSUMING collection maps each handle to one of its own flows; the brand book never names the flow.", "handle": "edit", "scope": "item", "intent": "Edit the bound item.", "consumer_must_map_to": "the collection's edit flow" }
+  ],
+  "surfaces": {
+    "$comment": "OPTIONAL (v1.1+). Where this template can render. Templates with interactive actions declare cowork_interactive; export_formats lists static targets.",
+    "default": "cowork_interactive",
+    "cowork_interactive": { "notes": "In-app interactive render; action buttons emit their handle back to the session." },
+    "export_formats": ["html", "pdf", "docx", "markdown"],
+    "export_notes": "Static renders omit action buttons unless an interactive export is requested."
+  },
+  "slots": [
+    { "name": "client-logo", "kind": "image", "placement": "cover.top-right", "sizing": "max-height 18mm", "clear_space": "0.5x logo height", "required": false },
+    { "name": "item-logo", "kind": "image", "placement": "<card-element>.badge", "sizing": "fit badge", "clear_space": null, "required": false, "notes": "OPTIONAL (v1.1+): per-item slot, supplied per bound item." }
+  ],
+  "per_format": { "docx": { "notes": "…" }, "pptx": { "notes": "…" } },
+  "author_hash": "…",
+  "author_name": "…",
   "last_updated": "YYYY-MM-DD",
   "provenance": {},
   "$notes": [
-    "Slot VALUES are never stored here \u2014 consumers supply them at compose time from their own context (e.g., a client-intelligence instance's branding/ dir).",
-    "Starter element slugs: cover-page, header, footer, table, list, callout, title-block, metadata-block, chart-style, kpi-card, toc, section-divider, code-block, quote."
+    "Slot VALUES are never stored here — consumers supply them at compose time from their own context (e.g., a client-intelligence instance's branding/ dir).",
+    "Starter element slugs: cover-page, header, footer, table, list, callout, title-block, metadata-block, chart-style, kpi-card, toc, section-divider, code-block, quote.",
+    "v1.1+ interactive-template fields (data_binding, marker_fills, action_contract, surfaces, section.repeat, item-scoped slots) are all OPTIONAL and back-compatible: a plain document template omits them. See internal/conventions.md > 'Interactive templates & action markers'."
   ]
 }

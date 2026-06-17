@@ -38,7 +38,7 @@ Provider operation for the `brand-book` capability (required op). Pure read.
 
 ### Step 2: Select the Rendering
 
-Parse. If `renderings.{format}` exists: resolve any `{token:...}` references by reading the relevant `/shared/brand-book/tokens/*.json` file(s) and substituting values; return `{found: true, element: {semantic, display_name, version, rendering: <resolved>}, rendering_missing: false}`.
+Parse. If `renderings.{format}` exists: resolve any `{token:...}` references by reading the relevant `/shared/brand-book/tokens/*.json` file(s) and substituting values; return `{found: true, element: {semantic, display_name, version, markers, rendering: <resolved>}, rendering_missing: false}`. Pass `markers` (v1.1+) through verbatim if present — they are the element's neutral insertion points; consumers/templates populate them.
 
 If the format key is absent: return `{found: true, element: {semantic, display_name, version, rendering: null}, rendering_missing: true}` — the consumer falls back to its native default for this element.
 

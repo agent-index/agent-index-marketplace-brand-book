@@ -36,7 +36,7 @@ Provider operation for the `brand-book` capability (optional op). Pure read.
 
 ### Step 2: Assemble
 
-Return `{found: true, template: {sections, per_format.{format} notes merged, display_name, version}, slots: <declared slots array>}`. Slot definitions pass through verbatim — placement/sizing/clear_space are instructions for the consumer's composition. Slot VALUES never appear here.
+Return `{found: true, template: {sections, per_format.{format} notes merged, display_name, version, data_binding, marker_fills, action_contract, surfaces}, slots: <declared slots array>}`. The v1.1+ fields (`data_binding`, `marker_fills`, `action_contract`, `surfaces`) pass through verbatim when present and are absent on plain document templates — see internal/conventions.md > 'Interactive templates & action markers'. Slot definitions pass through verbatim — placement/sizing/clear_space are instructions for the consumer's composition. Slot VALUES never appear here.
 
 ## Directives
 

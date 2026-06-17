@@ -30,7 +30,7 @@ Template name/artifact type, sections, element placements, slots.
 As create-element Step 1, against `templates/`.
 
 ### Step 2: Compose
-Collect: artifact_type; sections[] (name, required?, which elements — offer published + starter slugs); slots[] — for each: name, kind (image|text), placement, sizing, clear_space, required?. Remind: slot VALUES come from consumers at compose time (e.g., a client logo from a client-intelligence instance) — the template only defines WHERE and HOW BIG. Per-format notes optional. Show assembled template.json; confirm.
+Collect: artifact_type; sections[] (name, required?, which elements — offer published + starter slugs); slots[] — for each: name, kind (image|text), placement, sizing, clear_space, required?. Remind: slot VALUES come from consumers at compose time (e.g., a client logo from a client-intelligence instance) — the template only defines WHERE and HOW BIG. Per-format notes optional. Show assembled template.json; confirm. For an INTERACTIVE directory/list template (per-item cards, page or row actions), follow `internal/conventions.md` > 'Interactive templates & action markers': fill element markers via `marker_fills`, declare `action_contract` + `surfaces`, and use `data_binding` for the repeating element.
 
 ### Step 3: Write
 `aifs_write` draft via `id:` anchor. Same confirmation/next-steps pattern as create-element.
