@@ -1,7 +1,7 @@
 ---
 name: edit-brand-template
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Edit a draft template, or start a revision draft of a published template.
 stateful: false
@@ -30,10 +30,10 @@ Updated draft `template.json`.
 As edit-element Step 1 (draft space → published copy-to-revision-draft → suggest create-template).
 
 ### Step 2: Edit
-Sections, element refs, slots, per-format notes. Collaborator-on-shared-draft editing as in edit-element.
+Sections, element refs, slots, per-format notes. Collaborator-on-shared-draft editing as in edit-element: open via the cross-drive anchor `id:{item_drive_id}:{folder_id}/template.json` when the pointer has `item_drive_id`, else the bare `id:{folder_id}/template.json`. Skip pointers with `status: "published"`. If the bare read returns PATH_NOT_FOUND for a pre-1.2.0 pointer, ask the draft's owner to re-run share-draft (it backfills `item_drive_id`); never try another connector.
 
 ### Step 3: Write
-Confirm, `aifs_write`, next-steps note.
+Confirm, `aifs_write`, next-steps note. A collaborated draft is written through the **same base used to read it** (`id:{item_drive_id}:{folder_id}/template.json`, or bare `id:{folder_id}/template.json` for an old pointer), never the member's own draft path.
 
 ## Directives
 

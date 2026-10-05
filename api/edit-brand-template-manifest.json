@@ -3,8 +3,8 @@
   "type": "task",
   "display_name": "Edit Brand Template",
   "collection": "brand-book",
-  "collection_version": "1.0.1",
-  "version": "1.0.0",
+  "collection_version": "1.2.0",
+  "version": "1.0.1",
   "eol_date": null,
   "eol_warning_days": 60,
   "stateful": false,
@@ -20,5 +20,5 @@
   "produces_artifacts": false,
   "produces_shared_artifacts": false,
   "reads_from": "/shared/brand-book/",
-  "writes_to": null
+  "writes_to": "member draft space (id: anchor)"
 }
