@@ -31,11 +31,11 @@ One org-wide switch, `brand_usage` (`required` | `optional`), set at install and
 
 ## Requirements
 
-agent-index-core ≥ 3.10.0 and agent-index-marketplace ≥ 2.10.0 (capability-provider runtime V1).
+agent-index-core ≥ 3.32.0 and agent-index-marketplace ≥ 2.10.0 (capability-provider runtime V1).
 
 ## Version
 
-1.0.1
+1.2.0
 
 ## Version History
 
