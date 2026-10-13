@@ -16,6 +16,9 @@
 - `collection.json` natural-language triggers for `create-brand-template` / `edit-brand-template` pointed at the pre-1.0.1 names `create-template` / `edit-template`; they now name the real capabilities.
 - Every `api/*-manifest.json` `collection_version` and the README version stanza were still `1.0.1` under collection 1.1.0. They now track the collection version.
 
+### License
+- Proprietary, as before: `LICENSE` added and the `collection.json` `license` field set to `proprietary` (it said `open`).
+
 ## [1.1.0] — 2026-06-17 — interactive templates & action markers
 
 ### Added
