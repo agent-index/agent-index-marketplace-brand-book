@@ -1,7 +1,7 @@
 ---
 name: preview-brand
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Render a sample artifact exercising the current brand (all starter elements + a chosen template, dummy slot values) so the design team can iterate without running other collections.
 stateful: false

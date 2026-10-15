@@ -1,7 +1,7 @@
 ---
 name: create-element
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Draft a new display element (or a starter element definition) in the author's private space, with per-format renderings.
 stateful: false

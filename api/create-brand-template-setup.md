@@ -15,7 +15,7 @@ None — behavior is governed by org collection setup (`brand_usage`) and conven
 
 ## Setup Completion
 
-1. Write the installed instance (using native file tools — LOCAL workspace) to `members/{member_hash}/skills/create-brand-template/`
+1. Write the installed instance (using native file tools — LOCAL workspace) to `members/{member_hash}/installed/brand-book/task/create-brand-template/`
 2. Write `manifest.json`; register in `member-index.json`.
 3. Confirm to member: "create-brand-template is ready."
 

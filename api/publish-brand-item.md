@@ -1,7 +1,7 @@
 ---
 name: publish-brand-item
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Publish a draft element or template into the org brand book (promotion-as-relocation with confirmation, attribution, and activity logging).
 stateful: false
