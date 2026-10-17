@@ -1,7 +1,7 @@
 ---
 name: share-draft
 type: task
-version: 1.1.1
+version: 1.1.2
 collection: brand-book
 description: Share a draft element or template with specific reviewers (read) or collaborators (read+write) via owner-confirmed, verified grants (core permission-changes procedure).
 stateful: false
@@ -34,7 +34,7 @@ Member's draft space via `id:{member_folder_id}` anchor. `aifs_stat` the draft f
 Map: reviewer → `reader`, collaborator → `writer`.
 
 **Recipients.**
-- A person in `members-registry.json` → their `sharing_identity`. Read the registry by id anchor: org-config `resource_ids.members_registry` (`aifs_read("id:{members_registry_id}")`); OneDrive: read `/members-registry.json` by path instead — a bare `id:` resolves against your own drive there (core standards § Addressing, finding 63). On gdrive a by-path read of `/members-registry.json` returns FILE_NOT_FOUND for non-Drive-members; that is an addressing artifact, not absence.
+- A person in `members-registry.json` → their `sharing_identity`. Read the registry by id anchor: org-config `resource_ids.members_registry` (`aifs_read("id:{members_registry_id}")`); OneDrive: read `/members-registry.json` by path instead — a bare `id:` resolves against your own drive there (core runtime-reference.md § "Addressing: Owned Content and Sharing", finding 63). On gdrive a by-path read of `/members-registry.json` returns FILE_NOT_FOUND for non-Drive-members; that is an addressing artifact, not absence.
 - A name that doesn't resolve → ask for their email address. Never guess.
 - An address outside the registry is allowed. The permission-changes table marks it **outside your org**, and it's the owner's call. Tell the owner the recipient opens it from their storage app's "Shared with me", because the brand-book index is for org members.
 
