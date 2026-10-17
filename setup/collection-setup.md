@@ -24,7 +24,7 @@ upgrade_compatible: true
 ## Setup Completion
 
 1. Create `/shared/brand-book/` with subdirectories `tokens/`, `voice/`, `elements/`, `templates/`, `assets/` and an empty `activity-log.jsonl` (via `aifs_write`).
-2. Create `/shared/brand-book-index/`.
+2. Create `/shared/brand-book-index/`: if `aifs_exists` says it's missing, write a placeholder `README.md` into it via `aifs_write` (a folder only exists once it holds a file). It must exist before install-collection Step 5.5 applies the `collaborative-acls.json` grants (finding 55).
 3. (install-collection Step 5.5 provisions the collaborative ACLs from `collaborative-acls.json`; Step 5.7 offers provider registration carrying `brand_usage` into `provider_config`.)
 4. Confirm: "Brand book installed (empty). Design team members can start with 'edit the brand' (tokens + voice) and 'create a brand element'. Run 'preview the brand' anytime."
 

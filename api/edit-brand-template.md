@@ -1,7 +1,7 @@
 ---
 name: edit-brand-template
 type: task
-version: 1.0.1
+version: 1.0.2
 collection: brand-book
 description: Edit a draft template, or start a revision draft of a published template.
 stateful: false

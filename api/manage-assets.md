@@ -1,7 +1,7 @@
 ---
 name: manage-assets
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Upload, name, replace, or retire brand assets (logos, icons, patterns) in the published brand book.
 stateful: false

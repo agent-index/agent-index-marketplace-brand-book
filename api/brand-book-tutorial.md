@@ -1,7 +1,7 @@
 ---
 name: brand-book-tutorial
 type: skill
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Guided tour of the brand-book collection — concepts, the draft→share→publish flow, tokens vs elements vs templates, slots, and how other collections consume the brand.
 stateful: false

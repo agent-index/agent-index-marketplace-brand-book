@@ -1,7 +1,7 @@
 ---
 name: create-brand-template
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Draft a new artifact template (composition + slots) in the author's private space.
 stateful: false

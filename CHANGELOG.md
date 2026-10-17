@@ -1,5 +1,12 @@
 # Brand Book Collection — Changelog
 
+## [1.2.1] — 2026-10-17 — install paths and index folder
+
+### Fixed (4.0.1 pass — OneDrive and Google Drive live tests)
+- **Setup creates `/shared/brand-book-index/` (with a placeholder README) before its grants are provisioned (finding 55).**
+- `*-setup.md` files name the collection-qualified install path, with the correct `task` type for the nine tasks that were listed under `skills/` (finding 14).
+- **share-draft 1.1.1 reads the members registry by path on OneDrive** (finding 63).
+
 ## [1.2.0] — 2026-10-02 — Draft sharing through the core permission-changes procedure
 
 **MINOR — requires agent-index-core 3.32.0.** Part of retiring the permission-change-helper (design record: `/shared/projects/core-improvements/artifacts/retire-permission-helper-*.md`).

@@ -1,7 +1,7 @@
 ---
 name: edit-brand
 type: task
-version: 1.0.0
+version: 1.0.1
 collection: brand-book
 description: Edit the org's design tokens, voice definition, and tone modifiers (the published brand foundations).
 stateful: false
