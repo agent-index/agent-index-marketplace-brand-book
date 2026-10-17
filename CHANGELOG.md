@@ -1,6 +1,6 @@
 # Brand Book Collection — Changelog
 
-## [1.2.2] — <RELEASE_DATE> — standards.md citation re-pointed
+## [1.2.2] — 2026-10-17 — standards.md citation re-pointed
 
 Pairs with core 4.1.0, which retires `standards.md`: share-draft 1.1.2 cites core `runtime-reference.md` § "Addressing: Owned Content and Sharing" for the backend read rule (finding 63). No behaviour change.
 
