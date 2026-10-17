@@ -1,6 +1,6 @@
 # Brand Book Collection — Changelog
 
-## [1.2.1] — <RELEASE_DATE> — install paths and index folder
+## [1.2.1] — 2026-10-17 — install paths and index folder
 
 ### Fixed (4.0.1 pass — OneDrive and Google Drive live tests)
 - **Setup creates `/shared/brand-book-index/` (with a placeholder README) before its grants are provisioned (finding 55).**
