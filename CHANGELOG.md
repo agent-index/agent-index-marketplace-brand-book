@@ -1,5 +1,9 @@
 # Brand Book Collection — Changelog
 
+## [1.2.2] — <RELEASE_DATE> — standards.md citation re-pointed
+
+Pairs with core 4.1.0, which retires `standards.md`: share-draft 1.1.2 cites core `runtime-reference.md` § "Addressing: Owned Content and Sharing" for the backend read rule (finding 63). No behaviour change.
+
 ## [1.2.1] — 2026-10-17 — install paths and index folder
 
 ### Fixed (4.0.1 pass — OneDrive and Google Drive live tests)

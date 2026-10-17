@@ -35,7 +35,7 @@ agent-index-core ≥ 3.32.0 and agent-index-marketplace ≥ 2.10.0 (capability-p
 
 ## Version
 
-1.2.1
+1.2.2
 
 ## Version History
 
