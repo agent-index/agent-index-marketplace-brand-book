@@ -39,7 +39,7 @@ All reads via `aifs_read` (remote):
 
 ### Step 2: Read Provider Config
 
-`aifs_read("/org-config.json")` → `capability_providers["brand-book"].providers[0].provider_config.brand_usage` → the `brand_usage` return field. Read this collection's version from `/brand-book/collection.json` → `brand_book_version`.
+Read org-config (org-config read by backend (local `agent-index.json` `remote_filesystem.backend`): on Google Drive `aifs_read("id:{org_config_id}")` with `org_config_id` from local `agent-index.json` `remote_filesystem.connection`; on OneDrive `aifs_read("/org-config.json")` (a bare `/org-config.json` path fails for a member who is not in the Shared Drive, and a bare `id:` fails on OneDrive — core `runtime-reference.md` § "Addressing: Owned Content and Sharing", finding 63)) → `capability_providers["brand-book"].providers[0].provider_config.brand_usage` → the `brand_usage` return field. Read this collection's version from its `collection.json` → `brand_book_version`: on Google Drive `id:{folder_id}/collection.json`, `folder_id` from the `brand-book` entry in org-config `installed_collections[]`; on OneDrive `/brand-book/collection.json`.
 
 ### Step 3: Assemble and Return
 
